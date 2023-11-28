@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Cadastro from './components/cadastro';
 import Despesas from './components/Despesas';
 import Receitas from './components/Receitas';
 import './App.css';
 
 const App = () => {
-  // Utiliza o hook useState para criar estados para despesas e receitas, iniciados como arrays vazios.
-  const [despesas, setDespesas] = useState([]);
-  const [receitas, setReceitas] = useState([]);
+    // Inicializa os estados despesas e receitas lendo do localStorage ou um array vazio.
+    const [despesas, setDespesas] = useState(JSON.parse(localStorage.getItem('despesas')) || []);
+    const [receitas, setReceitas] = useState(JSON.parse(localStorage.getItem('receitas')) || []);
+  
+    // Atualiza o localStorage sempre que despesas ou receitas mudam.
+    useEffect(() => {
+      localStorage.setItem('despesas', JSON.stringify(despesas));
+      localStorage.setItem('receitas', JSON.stringify(receitas));
+    }, [despesas, receitas]);
 
   // Função handleAdd para adicionar uma nova despesa ou receita ao estado correspondente.
   const handleAdd = (item) => {
