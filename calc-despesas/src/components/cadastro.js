@@ -45,6 +45,7 @@ const Cadastro = ({ onAdd }) => {
         <option value="Cartão">Cartão</option>
         <option value="Dinheiro">Dinheiro</option>
         <option value="PIX">PIX</option>
+        <option value="Boleto">Boleto</option>
       </select>
       <button onClick={handleAdd}>Adicionar</button>
     </div>
