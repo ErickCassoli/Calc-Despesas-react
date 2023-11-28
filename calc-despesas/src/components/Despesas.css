@@ -1,0 +1,11 @@
+/* src/components/Despesas.css */
+.card {
+    width: 300px;
+    align-self: flex-start;
+  }
+  
+  .item-card {
+    margin-bottom: 10px;
+  }
+  
+  

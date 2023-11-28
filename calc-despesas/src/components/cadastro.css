@@ -1,0 +1,26 @@
+/* src/components/Cadastro.css */
+.card {
+    width: 300px;
+    align-self: flex-start;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 94%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
